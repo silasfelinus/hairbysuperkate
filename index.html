@@ -8,14 +8,14 @@
     </head>
     <body>
         <div class="container">
-            <header id='navbar'>
+            <header class="active" id='navbar'>
                 <a href="#" class="logo">Hair <span>by superkate!</span></a>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Color</a></li>
                     <li><a href="#">Bookings</a></li>
                 </ul>
-                <span class="menuIcon"></span>
+                <span class="menuIcon" onclick="menuToggle()"></span>
             </header>
             <div class="content">
                 <div class="bannerText" id="slideshowText">
@@ -24,7 +24,7 @@
                           Hair by superkate!<br>
                         </h2>
                         <p>
-                          I love to work on hair.
+                          I love to work on hair.<br>
                           I love colorful hair most of all!<br>
                           I would probably love to work on your hair.<br>
                           Email me and we can talk about how we can<br>
@@ -37,7 +37,7 @@
                           Education<br>
                         </h2>
                         <p>
-                            I am a happy graduate of <br>
+                            In January of 2021, I graduated from  <br>
                             Frederick and Charles Beauty School<br>
                             where they encouraged me to explore my passion<br>
                             (bordering on obsession)<br>
@@ -79,8 +79,6 @@
         <script type="text/javascript">
           var slideshow = document.getElementById('slideshow');
           var slides = slideshow.getElementsByTagName('img');
-          var slideshowText = document.getElementById('slideshowText');
-          var slidesText = slideshowText.getElementsByTagName('div');
           var index = 0;
 
           function nextSlide(){
@@ -99,7 +97,7 @@
           var i = 0;
 
           function nextSlideText(){
-            slidesText[index].classList.remove('active');
+            slidesText[i].classList.remove('active');
             i = (i + 1) % slidesText.length;
             slidesText[i].classList.add('active');
           }
@@ -107,6 +105,10 @@
             slidesText[i].classList.remove('active');
             i = (i - 1 + slidesText.length) % slidesText.length;
             slidesText[i].classList.add('active');
+          }
+          function menuToggle(){
+            var nav = document.getElementbyId('navbar')
+            nav.classList.toggle('active')
           }
         </script>
     </body>

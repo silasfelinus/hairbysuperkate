@@ -323,11 +323,31 @@ header ul li a:hover:before
     cursor: pointer;
     padding: 8px;
     z-index:100000;
-    background: #fff url(images\menu.png);
+    background: #fff url('../images/menu.png');
     width: 34px;
     height: 34px;
     background-repeat: no-repeat;
     background-position: 6px;
-
+  }
+  header.active .menuIcon
+  {
+    background: #fff url(close.png);
+    background-repeat: no-repeat;
+    background-position: 6px;
+  }
+}
+@media (max-width: 767px)
+{
+  .container
+  {
+    padding: 20px 30px;
+  }
+  .menuIcon
+  {
+    right: 30px;
+  }
+  .icons .controls li img
+  {
+    max-width: 40px;
   }
 }
