@@ -3,39 +3,88 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Save: One Human</title>
+        <title>Hair by superkate!</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="container">
             <header id='navbar'>
-                <a href="#" class="logo">Hair<span>by Superk8</span></a>
+                <a href="#" class="logo">Hair <span>by superkate!</span></a>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Bookings</a></li>
                     <li><a href="#">Color</a></li>
+                    <li><a href="#">Bookings</a></li>
                 </ul>
             </header>
             <div class="content">
                 <div class="bannerText">
-                    <div>
-                        <h2>
-                            Hair<br>
-                            by Superk8
+                    <div class="active">
+                        <h2> 
+                          Hair by superkate!<br>
                         </h2>
                         <p>
-                            superk8 is great!<br>
-                            superk8! is the best!<br>
-                            
+                          I love to work on hair.
+                          I love colorful hair most of all!<br>
+                          I would probably love to work on your hair.<br>
+                          Email me and we can talk about how we can<br>
+                          make your dream hair a reality.
                         </p>
-                        <a href="#">Book Now</a>
+                        <a href="mailto:superkate@gmail.com">Email superkate!</a>
                     </div>
+                    <div>
+                        <h2>
+                          Education<br>
+                        </h2>
+                        <p>
+                            I am a happy graduate of <br>
+                            Frederick and Charles Beauty School<br>
+                            where they encouraged me to explore my passion<br>
+                            (bordering on obsession)<br>
+                            for colorful hair.<br>
+                        </p>
+                        <a href="mailto:superkate@gmail.com">Email superkate!</a>
+                    </div>
+                    <div>
+                      <h2> 
+                        Contact superkate!<br>
+                      </h2>
+                      <p>
+                        Please note that I am unable to charge for services<br>
+                        until I complete my state board <br>
+                        and licensing requirements<br>
+                        (though I happily accept donations)<br>
+                      </p>
+                      <a href="mailto:superkate@gmail.com">Email superkate!</a>
+                  </div>
                 </div>
-                <div class="bannerImg">
-                    <img src="images\stock1.jpg"
+                <div class="bannerImg" id="slideshow">
+                    <img src="images\stock1.jpg" class="active">
+                    <img src="images\stock2.jpg">
+                    <img src="images\stock3.jpg">
                 </div>
             </div>
+            <div class="icons">
+              <ul class="social_media">
+                <li><a href="https://www.facebook.com/rainbowsbysuperkate/"><img src="images/facebook_logo.png"></a></li>
+                <li><a href="https://twitter.com/superkate999"><img src="images/twitter_logo.png"></a></li>
+                <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
+              </ul>
+              <ul class="controls">
+                <li><a><img src="images/back_arrow.png" onclick="nextSlide();"></a></li>
+                <li><a><img src="images/front_arrow.png" onclick="nextSlide();"></a></li>></a></li>
+              </ul>
+            </div>
         </div>
+        <script type="text/javacript">
+        var slideshow = document.getElementById('slideshow');
+        var slides = slideshow.getElementsByTagName('img');
+        var index = 0;
+
+        function nextSlide(){
+          slides[index].classList.remove('active');
+          index = (index + 1) % slides.length;
+          slides[index].classList.add('active');
+        }
+      </script>
     </body>
 </html>
