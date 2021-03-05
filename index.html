@@ -15,9 +15,10 @@
                     <li><a href="#">Color</a></li>
                     <li><a href="#">Bookings</a></li>
                 </ul>
+                <span class="menuIcon"></span>
             </header>
             <div class="content">
-                <div class="bannerText">
+                <div class="bannerText" id="slideshowText">
                     <div class="active">
                         <h2> 
                           Hair by superkate!<br>
@@ -49,13 +50,13 @@
                         Contact superkate!<br>
                       </h2>
                       <p>
-                        Please note that I am unable to charge for services<br>
+                        Please note that I cannot charge for services<br>
                         until I complete my state board <br>
                         and licensing requirements<br>
                         (though I happily accept donations)<br>
                       </p>
                       <a href="mailto:superkate@gmail.com">Email superkate!</a>
-                  </div>
+                    </div>
                 </div>
                 <div class="bannerImg" id="slideshow">
                     <img src="images\stock1.jpg" class="active">
@@ -70,20 +71,42 @@
                 <li><a href="https://www.instagram.com/hairbysuperkate/"><img src="images/instagram_logo.png"></a></li>
               </ul>
               <ul class="controls">
-                <li><a><img src="images/back_arrow.png" onclick="nextSlide();"></a></li>
-                <li><a><img src="images/front_arrow.png" onclick="nextSlide();"></a></li>></a></li>
+                <li><a><img src="images/back_arrow.png" onclick="prevSlide();prevSlideText();"></a></li>
+                <li><a><img src="images/front_arrow.png" onclick="nextSlide();nextSlideText();"></a></li>
               </ul>
             </div>
         </div>
         <script type="text/javacript">
         var slideshow = document.getElementById('slideshow');
         var slides = slideshow.getElementsByTagName('img');
+        var slideshowText = document.getElementById('slideshowText');
+        var slidesText = slideshowText.getElementsByTagName('div');
         var index = 0;
 
         function nextSlide(){
           slides[index].classList.remove('active');
           index = (index + 1) % slides.length;
           slides[index].classList.add('active');
+        }
+        function prevSlide(){
+          slides[index].classList.remove('active');
+          index = (index - 1 + slides.length) % slides.length;
+          slides[index].classList.add('active');
+        }
+
+        var slideshowText = document.getElementById('slideshowText');
+        var slidesText = slideshowText.getElementsByTagName('div');
+        var i = 0;
+
+        function nextSlideText(){
+          slidesText[index].classList.remove('active');
+          i = (i + 1) % slidesText.length;
+          slidesText[i].classList.add('active');
+        }
+        function prevSlideText(){
+          slidesText[i].classList.remove('active');
+          i = (i - 1 + slidesText.length) % slidesText.length;
+          slidesText[i].classList.add('active');
         }
       </script>
     </body>

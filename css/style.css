@@ -244,3 +244,90 @@ header ul li a:hover:before
 {
   opacity: 0.5;
 }
+
+.menuIcon
+{
+  display: none;
+}
+@media (max-width: 992px)
+{
+  .container
+  {
+    padding: 20px 50px;
+  }
+  .container:before
+  {
+    display: none;
+  }
+  header
+  {
+    padding: 0;
+  }
+  .icons .controls li {
+    filter: invert(0);
+  }
+  .content .bannerText h2
+  {
+    font-size: 30px;
+  }
+  .content
+  {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .content .bannerImg
+  {
+    width: 100%;
+    height: 40vh;
+    margin: 20px 0;
+  }
+  .content .bannerText
+  {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  header ul
+  {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 10000;
+    display: initial;
+    padding: 100px 0;
+  }
+  header ul li
+  {
+    padding: 20px;
+    text-align: center;
+  }
+  header ul li a
+  {
+    color: var(--text_color_1);
+    font-size: 36px;
+  }
+
+  header ul li a:hover:before,
+  header ul li a.active:before
+  {
+    width: 100%;
+  }
+  .menuIcon
+  {
+    display: initial;
+    position: fixed;
+    right: 50px;
+    cursor: pointer;
+    padding: 8px;
+    z-index:100000;
+    background: #fff url(images\menu.png);
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: 6px;
+
+  }
+}
