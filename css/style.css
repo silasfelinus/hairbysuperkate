@@ -77,7 +77,7 @@ header .logo span
 }
 header ul
 {
-    positon: relative;
+    position: relative;
     display: flex;
 }
 header ul li
@@ -142,7 +142,7 @@ header ul li a:hover:before
 .content .bannerText h2
 {
   font-size: 54px;
-  text-transform: uppercase
+  text-transform: uppercase;
   font-weight: 800;
   line-height: 1.2em;
   color: var(--text_color_1);
